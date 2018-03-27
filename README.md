@@ -1,6 +1,10 @@
 # Test Angular using CucumberJs
+Angular - the code to test
+Protractor - test executor
+Cucumber - to write test in plain language
 
 ## Install
+Assuming you already have an existing Angular app
 `npm install --save-dev protractor-cucumber-framework`
 
 `npm install --save-dev cucumber`
@@ -45,3 +49,8 @@ exports.config = {
   }
 };
 ```
+
+## Reference
+https://github.com/protractor-cucumber-framework/protractor-cucumber-framework
+https://github.com/cucumber/cucumber-js
+https://github.com/spektrakel-blog/angular-protractor-cucumber

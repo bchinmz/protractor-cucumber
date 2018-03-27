@@ -17,6 +17,8 @@
 
 
 ## Config
+protractor.conf.js
+
 ```javascript
 exports.config = {
   allScriptsTimeout: 11000,

@@ -5,7 +5,7 @@ import * as chaiAsPromised from 'chai-as-promised';
 const expect = chai.use(chaiAsPromised).expect;
 
 Given('I open a page', function () {
-  return browser.get('http://localhost:4200').then(() => {
+  return browser.get('/').then(() => {
     element(by.css('h1')).getText()
       .then(text => {
         expect(text).to.have.string("Welcome to app!")

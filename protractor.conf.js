@@ -1,5 +1,5 @@
 exports.config = {
-  allScriptsTimeout: 1100000,
+  allScriptsTimeout: 11000,
 
   specs: [
     './e2e/features/**/*.feature'
@@ -8,6 +8,7 @@ exports.config = {
     'browserName': 'chrome'
   },
   directConnect: true,
+
   framework: 'custom',  // set to "custom" instead of cucumber.
 
   frameworkPath: require.resolve('protractor-cucumber-framework'),  // path relative to the current config file

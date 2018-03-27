@@ -1,7 +1,7 @@
 # Test Angular using CucumberJs
-Angular - the code to test
-Protractor - test executor
-Cucumber - to write test in plain language
+* Angular - the code to test
+* Protractor - test executor
+* Cucumber - to write test in plain language
 
 ## Install
 Assuming you already have an existing Angular app

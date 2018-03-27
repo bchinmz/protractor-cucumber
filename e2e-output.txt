@@ -1,0 +1,36 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Test",
+    "line": 1,
+    "id": "test",
+    "tags": [],
+    "uri": "e2e\\features\\app.feature",
+    "elements": [
+      {
+        "id": "test;first-scenario",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "First scenario",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I open a page",
+            "match": {
+              "location": "e2e\\features\\app.steps.ts:7"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 16000000,
+              "error_message": "AssertionError: expected { Object (browser_, then, ...) } to be a string\n    at World.<anonymous> (D:\\Development\\Play\\cucumber\\cucumber-test\\e2e\\features\\app.steps.ts:12:24)"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

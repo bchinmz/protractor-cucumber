@@ -51,6 +51,6 @@ exports.config = {
 ```
 
 ## Reference
-https://github.com/protractor-cucumber-framework/protractor-cucumber-framework
-https://github.com/cucumber/cucumber-js
-https://github.com/spektrakel-blog/angular-protractor-cucumber
+* https://github.com/protractor-cucumber-framework/protractor-cucumber-framework
+* https://github.com/cucumber/cucumber-js
+* https://github.com/spektrakel-blog/angular-protractor-cucumber

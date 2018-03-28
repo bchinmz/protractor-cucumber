@@ -1,6 +1,6 @@
-Feature: Test
+Feature: App page
 
     Scenario: First scenario
-        Given I open a page
-        # When I fill in passcode by copy-paste
-        # Then passcode is filled
+        Given I open app page
+        When app page loads
+        Then header "Welcome to app!" is displayed

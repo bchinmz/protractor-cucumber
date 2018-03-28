@@ -1,14 +1,14 @@
 [
   {
     "keyword": "Feature",
-    "name": "Test",
+    "name": "App page",
     "line": 1,
-    "id": "test",
+    "id": "app-page",
     "tags": [],
     "uri": "e2e\\features\\app.feature",
     "elements": [
       {
-        "id": "test;first-scenario",
+        "id": "app-page;first-scenario",
         "keyword": "Scenario",
         "line": 3,
         "name": "First scenario",
@@ -16,16 +16,52 @@
         "type": "scenario",
         "steps": [
           {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "e2e\\features\\app.steps.ts:19"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
             "arguments": [],
             "keyword": "Given ",
             "line": 4,
-            "name": "I open a page",
+            "name": "I open app page",
             "match": {
-              "location": "e2e\\features\\app.steps.ts:7"
+              "location": "e2e\\features\\app.steps.ts:23"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "app page loads",
+            "match": {
+              "location": "e2e\\features\\app.steps.ts:27"
             },
             "result": {
               "status": "passed",
-              "duration": 1201000000
+              "duration": 1366000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "header \"Welcome to app!2\" is displayed",
+            "match": {
+              "location": "e2e\\features\\app.steps.ts:31"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 86000000,
+              "error_message": "AssertionError: expected 'Welcome to app!' to contain 'Welcome to app!2'\n    at D:\\Development\\Play\\protractor-cucumber\\e2e\\features\\app.steps.ts:34:28\n    at elementArrayFinder_.then (D:\\Development\\Play\\protractor-cucumber\\node_modules\\protractor\\lib\\element.ts:840:22)\n    at ManagedPromise.invokeCallback_ (D:\\Development\\Play\\protractor-cucumber\\node_modules\\selenium-webdriver\\lib\\promise.js:1366:14)\n    at TaskQueue.execute_ (D:\\Development\\Play\\protractor-cucumber\\node_modules\\selenium-webdriver\\lib\\promise.js:2970:14)\n    at TaskQueue.executeNext_ (D:\\Development\\Play\\protractor-cucumber\\node_modules\\selenium-webdriver\\lib\\promise.js:2953:27)\n    at asyncRun (D:\\Development\\Play\\protractor-cucumber\\node_modules\\selenium-webdriver\\lib\\promise.js:2813:27)\n    at D:\\Development\\Play\\protractor-cucumber\\node_modules\\selenium-webdriver\\lib\\promise.js:676:7\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:188:7)"
             }
           }
         ]

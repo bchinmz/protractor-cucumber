@@ -135,3 +135,4 @@ See: https://github.com/cucumber/cucumber-js/blob/master/docs/support_files/time
 * https://github.com/protractor-cucumber-framework/protractor-cucumber-framework
 * https://github.com/cucumber/cucumber-js/tree/master/docs/support_files
 * https://github.com/spektrakel-blog/angular-protractor-cucumber
+* http://www.protractortest.org/#/api?view=ProtractorBrowser

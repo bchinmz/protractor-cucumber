@@ -1,4 +1,6 @@
 # Test Angular using CucumberJs
+I created this repository to consolidate all my findings on how to perform e2e testing on Angular using CucumberJs. I have practise Scenario based testing for VB.net and C# projects and not willing to let it go just because I have move to Angular project. I read through many articles in order to come out a working solution. I hope this will benefit not only myself and also to other front-end developer out there.
+
 * Angular - the code to test
 * Protractor - test executor
 * Cucumber - to write test in plain language

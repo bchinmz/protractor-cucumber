@@ -3,7 +3,7 @@
 * Protractor - test executor
 * Cucumber - to write test in plain language
 
-## Install
+## Setup
 Assuming you already have an existing Angular app
 
 `npm install --save-dev protractor-cucumber-framework`
@@ -51,7 +51,46 @@ exports.config = {
 };
 ```
 
+## Feature file
+* based on _protractor.conf.js_ place to store the feature file will be in:
+  * e2e\features\<filename>.features
+  * e2e\features\<folder>\<filename>.features
+* in the feature file, you may write your test in Gherkin
+
+```gherkin
+Feature: App page
+
+    Scenario: First scenario
+        Given I open app page
+        When app page loads
+        Then header "Welcome to app!" is displayed
+```
+
+## Steps definition
+* based on _protractor.conf.js_ place to store the feature file will be in:
+  * e2e\features\<filename>.steps.ts
+  * e2e\features\<folder>\<filename>.steps.ts
+* in the feature file, you may write your test in Gherkin
+
+## Timeout
+* By default, asynchronous hooks and steps timeout after 5000 milliseconds.
+* As the app grew larger and my laptop grew slower, is time to increase the timeout.
+* Timeout can be globally modified. However, for some reason only specific hook or step's timeout work for me.
+
+```javascript
+Before({timeout: 60 * 1000}, function() {
+  // Does some slow browser/filesystem/network actions
+});
+
+Given(/^a slow step$/, {timeout: 60 * 1000}, function() {
+  // Does some slow browser/filesystem/network actions
+});
+```
+
+See: https://github.com/cucumber/cucumber-js/blob/master/docs/support_files/timeouts.md
+
+
 ## Reference
 * https://github.com/protractor-cucumber-framework/protractor-cucumber-framework
-* https://github.com/cucumber/cucumber-js
+* https://github.com/cucumber/cucumber-js/tree/master/docs/support_files
 * https://github.com/spektrakel-blog/angular-protractor-cucumber

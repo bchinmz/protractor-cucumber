@@ -1,27 +1,39 @@
-# CucumberTest
+# Test Angular using CucumberJs
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.2.
+## Install
+`npm install --save-dev protractor-cucumber-framework`
+`npm install --save-dev cucumber`
+`npm install --save-dev chai`
+`npm install --save-dev chai-as-promised`
+`npm install --save-dev @types/cucumber`
+`npm install --save-dev @types/chai`
+`npm install --save-dev @types/chai-as-promised`
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Config
+```javascript
+exports.config = {
+  allScriptsTimeout: 11000,
 
-## Code scaffolding
+  specs: [
+    './e2e/features/**/*.feature'
+  ],
+  capabilities: {
+    'browserName': 'chrome'
+  },
+  directConnect: true,
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+  framework: 'custom',  // set to "custom" instead of cucumber.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+  frameworkPath: require.resolve('protractor-cucumber-framework'),  // path relative to the current config file
+  cucumberOpts: {
+    require: ['./e2e/features/**/*.steps.ts'], // loads step definitions
+    format: 'json: e2e-output.txt',               // enable console output
+  },
+  onPrepare() {
+    require('ts-node').register({
+      project: 'e2e/tsconfig.e2e.json' //enable typescript
+    });
+  }
+};
+```

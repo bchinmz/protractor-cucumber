@@ -15,11 +15,10 @@ exports.config = {
   cucumberOpts: {
     require: ['./e2e/features/**/*.steps.ts'], // loads step definitions
     format: 'json: e2e-output.txt',               // enable console output
-    //compiler: 'ts:ts-node/register'   // interpret step definitions as TypeScript
   },
   onPrepare() {
     require('ts-node').register({
-      project: 'e2e/tsconfig.e2e.json'
+      project: 'e2e/tsconfig.e2e.json' //enable typescript
     });
   }
 };

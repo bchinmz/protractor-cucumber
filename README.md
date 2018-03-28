@@ -70,7 +70,7 @@ Feature: App page
 * based on _protractor.conf.js_ place to store the feature file will be in:
   * e2e\features\<filename>.steps.ts
   * e2e\features\<folder>\<filename>.steps.ts
-* in the feature file, you may write your test in Gherkin
+* in the steps file, you may fill in your steps definition with test setup, test execution and test assertion.
 
 ```javascript
 import { Given, Before, When, Then } from 'cucumber';
